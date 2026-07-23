@@ -8,6 +8,11 @@ menu:
   about: /about/ || fa fa-user
 darkmode: true
 
+# 明暗主题：lightdark 用 CSS light-dark() 函数（吃我们的 -dark 变量），
+# 配合下方注入的浮动按钮 + data-theme，实现手动黑白切换
+lightdark:
+  enable: true
+
 # 侧栏头像与名字（名字取自站点 author: furadx）
 avatar:
   url: /images/avatar.png
@@ -46,7 +51,9 @@ favicon:
   medium: /images/avatar.png
   apple_touch_icon: /images/avatar.png
 
-# 注入自定义变量与样式（借鉴 Cactus 的皮肤）——务必保留，删掉会导致自定义样式全部失效
+# 注入自定义文件（借鉴 Cactus 的皮肤 + 明暗切换按钮）——务必保留，删掉会导致自定义样式全部失效
 custom_file_path:
+  head: source/_data/head.njk          # 防闪烁：首屏前按记忆/系统设定 data-theme
+  bodyEnd: source/_data/body-end.njk   # 明暗切换浮动按钮 + 逻辑
   variable: source/_data/variables.styl
   style: source/_data/styles.styl

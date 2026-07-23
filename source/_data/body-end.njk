@@ -1,0 +1,28 @@
+<button id="theme-toggle" type="button" aria-label="切换明暗主题" title="切换明暗主题"></button>
+<script>
+// 明暗主题手动切换：翻转 data-theme -> color-scheme -> light-dark() 随之切换；localStorage 记忆
+(function () {
+  var root = document.documentElement;
+  function effective() {
+    return root.getAttribute('data-theme')
+      || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  }
+  function refreshIcon() {
+    var b = document.getElementById('theme-toggle');
+    if (b) b.textContent = effective() === 'dark' ? '☀' : '☾';
+  }
+  refreshIcon();
+  // 事件委托绑定一次即可，避免 PJAX 重复注入导致重复绑定
+  if (!window.__themeToggleBound) {
+    window.__themeToggleBound = true;
+    document.addEventListener('click', function (e) {
+      var b = e.target.closest && e.target.closest('#theme-toggle');
+      if (!b) return;
+      var t = effective() === 'dark' ? 'light' : 'dark';
+      try { localStorage.setItem('theme', t); } catch (err) {}
+      root.setAttribute('data-theme', t);
+      refreshIcon();
+    });
+  }
+})();
+</script>
