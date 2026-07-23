@@ -1,8 +1,15 @@
 # NexT 8 主题配置写在这里，不要改 node_modules 里的文件
-scheme: Gemini            # 可选 Muse / Mist / Pisces / Gemini
+scheme: Muse              # 单栏居中、顶部菜单、去掉常驻侧栏，最接近 Cactus 的极简观感
 menu:
   home: / || fa fa-home
   archives: /archives/ || fa fa-archive
   tags: /tags/ || fa fa-tags
   categories: /categories/ || fa fa-th
 darkmode: true
+
+# 借鉴 Cactus：注入自定义变量与样式（文件位于 source/_data/ 下）
+# variable 在 NexT base 变量之后、_colors 之前导入，可覆盖配色变量
+# style 在所有样式最后导入，优先级最高
+custom_file_path:
+  variable: source/_data/variables.styl
+  style: source/_data/styles.styl

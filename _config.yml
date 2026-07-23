@@ -39,7 +39,7 @@ giscus:
   mapping: pathname
   reactions_enabled: 1
   emit_metadata: 0
-  theme: preferred_color_scheme
+  theme: transparent_dark      # 背景透明，继承页面底色，与整体统一（原 preferred_color_scheme 会在深色下变近黑，很突兀）
   lang: zh-CN
   input_position: bottom
   loading: lazy

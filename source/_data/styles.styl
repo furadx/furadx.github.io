@@ -1,0 +1,35 @@
+// ===== 借鉴 Cactus 的极简观感（本文件最后导入，优先级最高）=====
+
+// 1) 等宽字体 —— Cactus 最标志性的特征。中文无等宽字形会回退到系统中文字体，正常
+body,
+.site-title, .site-subtitle,
+.post-title, .post-title-link,
+h1, h2, h3, h4, h5, h6,
+.menu-item a
+  font-family: "Menlo", "Consolas", "Roboto Mono", "JetBrains Mono", "Courier New", monospace
+
+// 2) 扁平化：淡化卡片阴影与边框，贴近 Cactus 的无框感
+.post-block, .pagination, .sidebar-inner,
+#comments, .comments, .page-comments
+  box-shadow: none
+  border: none
+
+// 3) meta / 页脚 / 翻页用 Cactus 的柔灰
+.post-meta-container, .post-meta, .footer, .post-nav
+  color: #908d8d
+
+// 4) 正文链接 hover 用 Cactus 的 teal 次强调色
+.post-body a
+  transition: color .2s ease
+.post-body a:hover
+  color: #2bbc8a
+  border-bottom-color: #2bbc8a
+
+// 5) 深色下代码块贴近 Cactus 的代码底色
+[data-theme="dark"]
+  figure.highlight, pre, code, .post-body code
+    background: #26292c
+
+// 6) 正文行距略增，阅读更舒展
+.post-body
+  line-height: 1.85
