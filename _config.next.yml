@@ -1,0 +1,8 @@
+# NexT 8 主题配置写在这里，不要改 node_modules 里的文件
+scheme: Gemini            # 可选 Muse / Mist / Pisces / Gemini
+menu:
+  home: / || fa fa-home
+  archives: /archives/ || fa fa-archive
+  tags: /tags/ || fa fa-tags
+  categories: /categories/ || fa fa-th
+darkmode: true
