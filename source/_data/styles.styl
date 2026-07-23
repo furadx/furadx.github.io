@@ -33,3 +33,16 @@ h1, h2, h3, h4, h5, h6,
 // 6) 正文行距略增，阅读更舒展
 .post-body
   line-height: 1.85
+
+// 7) 布局优化：站点标题去掉 NexT 默认黑框，改成 Cactus 式纯文字标题
+.brand
+  background: transparent
+  border: none
+.site-title
+  color: #c25b8f
+[data-theme="dark"] .site-title
+  color: #d480aa
+
+// 8) 页脚与正文之间的空档收一收，页脚更贴合
+.footer
+  padding-top: 20px

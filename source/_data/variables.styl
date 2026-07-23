@@ -10,3 +10,12 @@ $link-color-dark         = #d480aa   // Cactus 玫瑰色链接（标志性）
 
 // 浅色模式也统一到同色系强调色，避免深浅切换割裂
 $link-color              = #c25b8f
+
+// ===== 布局优化：版心收窄，向 Cactus 的窄栏靠拢 =====
+// 三档宽度都压到 ~680px，宽屏不再撑到 900px；header/正文/footer 同用这些变量，保持对齐
+$content-desktop         = 680px
+$content-desktop-large   = 680px
+$content-desktop-largest = 720px
+
+// Muse 首篇顶部留白收小（默认 70px，留白过大）
+$posts-first-padding     = 40px
