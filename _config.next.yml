@@ -7,6 +7,25 @@ menu:
   categories: /categories/ || fa fa-th
 darkmode: true
 
+# 侧栏头像与名字（名字取自站点 author: furadx）
+avatar:
+  url: /images/avatar.png
+  rounded: true          # 圆形头像
+  rotated: false
+
+# 侧栏社交链接
+social:
+  GitHub: https://github.com/furadx || fab fa-github
+
+# 侧栏显示：always 让首页等所有页面都能唤出侧栏（Muse 下为可切换面板）
+sidebar:
+  position: left
+  display: always
+
+# 平滑翻页：开启 PJAX，切换页面时局部替换内容、不整页刷新、不闪白
+# （motion 默认已开，负责元素渐入动画，与 PJAX 配合就是 Muse demo 的过渡效果）
+pjax: true
+
 # 借鉴 Cactus：注入自定义变量与样式（文件位于 source/_data/ 下）
 # variable 在 NexT base 变量之后、_colors 之前导入，可覆盖配色变量
 # style 在所有样式最后导入，优先级最高
