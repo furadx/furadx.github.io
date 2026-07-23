@@ -17,13 +17,12 @@ avatar:
 social:
   GitHub: https://github.com/furadx || fab fa-github
 
-# 侧栏显示：hide = 默认不展开，仅点击左下角图标时唤出（含头像/名字/GitHub）
+# 侧栏显示：hide = 默认不展开，仅点击左下角图标时唤出（含头像/名字/GitHub/文章目录 TOC）
 sidebar:
   position: left
   display: hide
 
 # 平滑翻页：开启 PJAX，切换页面时局部替换内容、不整页刷新、不闪白
-# （motion 默认已开，负责元素渐入动画，与 PJAX 配合就是 Muse demo 的过渡效果）
 pjax: true
 
 # 代码块右上角复制按钮
@@ -36,9 +35,12 @@ codeblock:
 back2top:
   scrollpercent: true
 
-# 借鉴 Cactus：注入自定义变量与样式（文件位于 source/_data/ 下）
-# variable 在 NexT base 变量之后、_colors 之前导入，可覆盖配色变量
-# style 在所有样式最后导入，优先级最高
-custom_file_path:
-  variable: source/_data/variables.styl
-  style: source/_data/styles.styl
+# 站内搜索（配合 hexo-generator-searchdb）
+local_search:
+  enable: true
+
+# 标签页图标（favicon）换成头像
+favicon:
+  small: /images/avatar.png
+  medium: /images/avatar.png
+  apple_touch_icon: /images/avatar.png

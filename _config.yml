@@ -1,7 +1,8 @@
 # 站点信息
 title: furadx
 subtitle: ''
-description: ''
+description: 'furadx 的个人博客'
+keywords: 'furadx, blog, 个人博客'
 author: furadx
 language: zh-CN
 timezone: 'Asia/Shanghai'
@@ -39,12 +40,12 @@ giscus:
   mapping: pathname
   reactions_enabled: 1
   emit_metadata: 0
-  theme: transparent_dark      # 背景透明，继承页面底色，与整体统一（原 preferred_color_scheme 会在深色下变近黑，很突兀）
+  theme: transparent_dark      # 背景透明，继承页面底色，与整体统一
   lang: zh-CN
   input_position: bottom
   loading: lazy
 
-# 字数统计与阅读时长（hexo-word-counter，NexT 会自动在文章 meta 显示）
+# 字数统计与阅读时长（hexo-word-counter，NexT 自动在文章 meta 显示）
 symbols_count_time:
   symbols: true
   time: true
@@ -63,3 +64,20 @@ filter_optimize:
     remove_comments: false
   html:
     minify: true
+
+# 站内搜索（hexo-generator-searchdb 生成 search.xml，NexT local_search 前端读取）
+search:
+  path: search.xml
+  field: post
+  content: true
+  format: html
+
+# 站点地图（SEO 收录，hexo-generator-sitemap）
+sitemap:
+  path: sitemap.xml
+
+# RSS 订阅（hexo-generator-feed）
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
