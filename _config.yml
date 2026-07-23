@@ -43,3 +43,23 @@ giscus:
   lang: zh-CN
   input_position: bottom
   loading: lazy
+
+# 字数统计与阅读时长（hexo-word-counter，NexT 会自动在文章 meta 显示）
+symbols_count_time:
+  symbols: true
+  time: true
+  total_symbols: true
+  total_time: true
+  exclude_codeblock: false
+  wpm: 275
+
+# 页面优化（hexo-optimize）：压缩 HTML / CSS / JS，加快加载
+filter_optimize:
+  enable: true
+  css:
+    minify: true
+  js:
+    minify: true
+    remove_comments: false
+  html:
+    minify: true

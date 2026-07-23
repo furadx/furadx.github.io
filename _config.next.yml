@@ -17,14 +17,24 @@ avatar:
 social:
   GitHub: https://github.com/furadx || fab fa-github
 
-# 侧栏显示：always 让首页等所有页面都能唤出侧栏（Muse 下为可切换面板）
+# 侧栏显示：hide = 默认不展开，仅点击左下角图标时唤出（含头像/名字/GitHub）
 sidebar:
   position: left
-  display: always
+  display: hide
 
 # 平滑翻页：开启 PJAX，切换页面时局部替换内容、不整页刷新、不闪白
 # （motion 默认已开，负责元素渐入动画，与 PJAX 配合就是 Muse demo 的过渡效果）
 pjax: true
+
+# 代码块右上角复制按钮
+codeblock:
+  copy_button:
+    enable: true
+    show_result: true
+
+# 回到顶部按钮显示阅读进度百分比
+back2top:
+  scrollpercent: true
 
 # 借鉴 Cactus：注入自定义变量与样式（文件位于 source/_data/ 下）
 # variable 在 NexT base 变量之后、_colors 之前导入，可覆盖配色变量
