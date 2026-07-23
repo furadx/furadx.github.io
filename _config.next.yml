@@ -5,6 +5,7 @@ menu:
   archives: /archives/ || fa fa-archive
   tags: /tags/ || fa fa-tags
   categories: /categories/ || fa fa-th
+  about: /about/ || fa fa-user
 darkmode: true
 
 # 侧栏头像与名字（名字取自站点 author: furadx）
@@ -17,10 +18,10 @@ avatar:
 social:
   GitHub: https://github.com/furadx || fab fa-github
 
-# 侧栏显示：hide = 默认不展开，仅点击左下角图标时唤出（含头像/名字/GitHub/文章目录 TOC）
+# 侧栏显示：post = 打开文章时自动展开（显示文章目录 TOC）；首页等非文章页不自动展开
 sidebar:
   position: left
-  display: hide
+  display: post
 
 # 平滑翻页：开启 PJAX，切换页面时局部替换内容、不整页刷新、不闪白
 pjax: true
@@ -44,3 +45,8 @@ favicon:
   small: /images/avatar.png
   medium: /images/avatar.png
   apple_touch_icon: /images/avatar.png
+
+# 注入自定义变量与样式（借鉴 Cactus 的皮肤）——务必保留，删掉会导致自定义样式全部失效
+custom_file_path:
+  variable: source/_data/variables.styl
+  style: source/_data/styles.styl

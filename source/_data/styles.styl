@@ -46,3 +46,18 @@ h1, h2, h3, h4, h5, h6,
 // 8) 页脚与正文之间的空档收一收，页脚更贴合
 .footer
   padding-top: 20px
+
+// 9) 搜索弹窗优化：收敛过大的尺寸、弱化空状态的巨型放大镜
+.search-pop-overlay
+  align-items: center            // 垂直居中，避免弹窗被拉伸到全屏高
+.search-popup
+  max-width: 640px
+  width: 92%
+  height: auto
+  max-height: 74vh
+  border-radius: 8px
+.search-result-icon
+  padding: 2em 0
+  .fa-5x
+    font-size: 2.2em             // 原 80px 巨图标缩小
+    opacity: 0.18                // 淡化成水印
