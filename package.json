@@ -2,7 +2,9 @@
   "name": "furadx-blog",
   "version": "1.0.0",
   "private": true,
-  "hexo": { "version": "" },
+  "hexo": {
+    "version": "8.1.2"
+  },
   "scripts": {
     "server": "hexo server",
     "build": "hexo generate"
